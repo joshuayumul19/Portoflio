@@ -1,0 +1,278 @@
+@import "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Press Start 2P";
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.wrapper .sidebar {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  padding: 80px 20px;
+  transition: all 0.5s ease;
+}
+.wrapper .sidebar .profile {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.wrapper .sidebar .profile img {
+  display: block;
+  width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.wrapper .sidebar .profile h3 {
+  color: #ffffff;
+  margin: 10px 0 5px;
+}
+.wrapper .sidebar .profile p {
+  color: rgb(206, 240, 253);
+  font-size: 14px;
+}
+.wrapper .sidebar ul li a {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid #10558d;
+  color: rgb(241, 237, 237);
+  font-size: 16px;
+  position: relative;
+  padding: 25px;
+}
+.wrapper .sidebar ul li a .icon {
+  color: #dee4ec;
+  width: 30px;
+  display: inline-block;
+}
+.wrapper .sidebar ul li a:hover {
+  color: #0c7db1;
+  background: white;
+  border-right: 2px solid rgb(5, 68, 104);
+}
+.wrapper .sidebar ul li a:hover .icon {
+  color: #0c7db1;
+}
+.wrapper .sidebar ul li a:hover:before {
+  display: block;
+}
+.wrapper .sidebar .socials {
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+}
+.wrapper .sidebar .socials a:hover {
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+.wrapper .sidebar .socials a:hover span {
+  color: black;
+}
+.wrapper .sidebar .socials .icon {
+  color: #dee4ec;
+}
+
+main {
+  width: 75%;
+  margin: 100px 450px;
+  border: 3px solid #21EF80;
+  padding: 75px;
+  border-radius: 25px;
+}
+main .uppermost_text {
+  display: flex;
+  justify-content: space-between;
+}
+main .uppermost_text h4:first-child {
+  color: #4E53E2;
+}
+main .uppermost_text span {
+  color: #21EF80;
+}
+main #home {
+  /* The typing effect */
+  /* The typewriter cursor effect */
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #FF63D8;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #FF63D8;
+  }
+}
+main #home h1 {
+  margin-top: 50px;
+}
+main #home .typewriter {
+  margin-top: 70px;
+  width: 640px;
+}
+main #home .typewriter h1 {
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+main #home .typewriter h1 span {
+  color: #FF63D8;
+}
+main #home p {
+  margin-top: 80px;
+  line-height: 3;
+  text-align: justify;
+}
+main hr {
+  margin: 50px 0;
+}
+main #experience p {
+  line-height: 3;
+  margin-top: 50px;
+}
+main #experience h1 {
+  color: #FF63D8;
+}
+main #education .education_list li {
+  list-style: disc;
+  margin: 50px 0;
+  line-height: 3;
+}
+main #education h1 {
+  color: #FF63D8;
+}
+main #projects h1 {
+  color: #FF63D8;
+}
+main #projects .projects_container {
+  margin-top: 50px;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main #projects .projects_container h1 {
+  color: #FF63D8;
+}
+main #projects .projects_container .project_card {
+  width: 45%;
+  padding: 30px 0;
+}
+main #projects .projects_container .project_card img {
+  width: 100%;
+  border-radius: 15px;
+}
+main #projects .projects_container .project_card .pokemon img {
+  width: 20%;
+}
+main #projects .projects_container .mobile_screenshot {
+  width: 225px;
+}
+main #projects .projects_container .detail_container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  align-items: baseline;
+}
+main #projects .projects_container .detail_container a {
+  color: white;
+}
+main #projects .projects_container .link_icons:hover {
+  transition: 0.2s;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+main #skills h1 {
+  color: #FF63D8;
+}
+main #skills .details {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+main #skills .details .text_details {
+  width: 40%;
+  letter-spacing: 2px;
+  line-height: 2;
+  margin-top: 35px;
+  text-align: justify;
+  text-indent: 50px;
+}
+main #skills .details .logos_container {
+  border: 2px solid #4E53E2;
+  width: 40%;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+}
+main #skills .details .logos_container img {
+  width: 90px;
+  margin: 20px;
+}
+main #fun_facts h1 {
+  color: #FF63D8;
+}
+main #fun_facts ul {
+  line-height: 2;
+  margin-top: 50px;
+  text-align: justify;
+}
+main #fun_facts ul li {
+  margin: 30px 0;
+}
+main #fun_facts ul .facts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main #fun_facts ul .facts p {
+  width: 50%;
+}
+main #fun_facts ul .facts img {
+  width: 500px;
+  border-radius: 20px;
+}/*# sourceMappingURL=styles.css.map */
