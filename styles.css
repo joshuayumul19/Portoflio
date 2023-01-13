@@ -17,80 +17,79 @@ body {
   color: white;
 }
 
-.wrapper .sidebar {
-  background: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 400px;
-  height: 100%;
-  padding: 80px 20px;
-  transition: all 0.5s ease;
+#mobile_menu_container {
+  display: none;
 }
-.wrapper .sidebar .profile {
+
+#wrapper .sidebar {
+  position: fixed;
+  width: 20%;
+  transition: all 0.5s ease;
+  top: 40px;
+}
+#wrapper .sidebar .profile {
   margin-bottom: 30px;
   text-align: center;
 }
-.wrapper .sidebar .profile img {
+#wrapper .sidebar .profile img {
   display: block;
-  width: 200px;
+  width: 80%;
   border-radius: 50%;
   margin: 0 auto;
 }
-.wrapper .sidebar .profile h3 {
+#wrapper .sidebar .profile h3 {
   color: #ffffff;
   margin: 10px 0 5px;
+  font-size: 16px;
 }
-.wrapper .sidebar .profile p {
+#wrapper .sidebar .profile p {
   color: rgb(206, 240, 253);
-  font-size: 14px;
+  font-size: 10px;
 }
-.wrapper .sidebar ul li a {
+#wrapper .sidebar ul li a {
   display: block;
-  padding: 13px 30px;
-  border-bottom: 1px solid #10558d;
   color: rgb(241, 237, 237);
   font-size: 16px;
   position: relative;
   padding: 25px;
 }
-.wrapper .sidebar ul li a .icon {
+#wrapper .sidebar ul li a .icon {
   color: #dee4ec;
   width: 30px;
   display: inline-block;
 }
-.wrapper .sidebar ul li a:hover {
+#wrapper .sidebar ul li a:hover {
   color: #0c7db1;
   background: white;
   border-right: 2px solid rgb(5, 68, 104);
 }
-.wrapper .sidebar ul li a:hover .icon {
+#wrapper .sidebar ul li a:hover .icon {
   color: #0c7db1;
 }
-.wrapper .sidebar ul li a:hover:before {
+#wrapper .sidebar ul li a:hover:before {
   display: block;
 }
-.wrapper .sidebar .socials {
-  margin: 70px auto;
+#wrapper .sidebar .socials {
+  margin: 15% auto;
   display: flex;
   justify-content: space-around;
   width: 100px;
 }
-.wrapper .sidebar .socials a:hover {
+#wrapper .sidebar .socials a:hover {
   background-color: white;
   padding: 5px;
   border-radius: 50%;
 }
-.wrapper .sidebar .socials a:hover span {
+#wrapper .sidebar .socials a:hover span {
   color: black;
 }
-.wrapper .sidebar .socials .icon {
+#wrapper .sidebar .socials .icon {
   color: #dee4ec;
 }
 
 main {
   width: 75%;
-  margin: 100px 450px;
+  margin: 5% 20%;
   border: 3px solid #21EF80;
   padding: 75px;
   border-radius: 25px;
@@ -164,6 +163,10 @@ main #home p {
   line-height: 3;
   text-align: justify;
 }
+main #home p span {
+  border-bottom: 2px solid #FF63D8;
+  padding-bottom: 5px;
+}
 main hr {
   margin: 50px 0;
 }
@@ -190,24 +193,18 @@ main #projects .projects_container {
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 main #projects .projects_container h1 {
   color: #FF63D8;
 }
 main #projects .projects_container .project_card {
-  width: 45%;
+  width: 600px;
   padding: 30px 0;
 }
 main #projects .projects_container .project_card img {
   width: 100%;
   border-radius: 15px;
-}
-main #projects .projects_container .project_card .pokemon img {
-  width: 20%;
-}
-main #projects .projects_container .mobile_screenshot {
-  width: 225px;
 }
 main #projects .projects_container .detail_container {
   display: flex;
@@ -241,11 +238,10 @@ main #skills .details .text_details {
 }
 main #skills .details .logos_container {
   border: 2px solid #4E53E2;
-  width: 40%;
-  padding: 50px;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 20px;
   align-items: center;
 }
@@ -270,9 +266,135 @@ main #fun_facts ul .facts {
   align-items: center;
 }
 main #fun_facts ul .facts p {
-  width: 50%;
+  width: 40%;
 }
 main #fun_facts ul .facts img {
   width: 500px;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  #wrapper .sidebar ul li a {
+    display: block;
+    color: rgb(241, 237, 237);
+    font-size: 11px;
+    position: relative;
+    padding: 25px;
+  }
+  #wrapper .sidebar .socials {
+    margin: 40px auto;
+  }
+  main #skills .details {
+    display: block;
+  }
+  main #skills .details .text_details {
+    width: 100%;
+  }
+  main #skills .details .logos_container {
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+  }
+  main #fun_facts ul {
+    text-align: center;
+  }
+  main #fun_facts ul .facts {
+    display: block;
+  }
+  main #fun_facts ul .facts p {
+    width: 100%;
+  }
+  main #projects .projects_container .project_card {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 964px) {
+  main #home .typewriter {
+    width: 95%;
+  }
+  main #home .typewriter h1 {
+    white-space: normal;
+  }
+}
+@media screen and (max-width: 768px) {
+  #wrapper .sidebar {
+    width: 28.5%;
+  }
+  #wrapper .sidebar ul li a {
+    font-size: 13px;
+  }
+  main {
+    margin: 5% 30%;
+  }
+  main #home .typewriter {
+    width: 80%;
+  }
+  main #home .typewriter h1 {
+    white-space: normal;
+  }
+  main #fun_facts ul .facts img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 10px;
+  }
+  #mobile_menu_container {
+    padding: 20px 30px;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    align-items: center;
+    -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
+  }
+  #mobile_menu_container img {
+    width: 20%;
+    border-radius: 50%;
+  }
+  #mobile_menu {
+    font-size: 30px;
+    position: relative;
+  }
+  #wrapper {
+    display: none;
+  }
+  #wrapper .sidebar {
+    width: 100%;
+    -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
+    top: 91px;
+  }
+  #wrapper .sidebar .profile {
+    margin: 0;
+  }
+  #wrapper .sidebar .profile img {
+    display: none;
+  }
+  #wrapper .sidebar .profile h3,
+#wrapper .sidebar .profile p {
+    display: none;
+  }
+  main {
+    width: 95%;
+    padding: 20px;
+    margin: 0 auto;
+    border: none;
+  }
+  main #home {
+    margin-top: 150px;
+  }
+  main #home .typewriter {
+    width: 60%;
+  }
+  main #home .typewriter h1 {
+    white-space: normal;
+  }
+  main #skills .details .logos_container img {
+    width: 50px;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -26,16 +26,16 @@ body {
 	color: white;
 }
 
-.wrapper {
+#mobile_menu_container {
+	display: none;
+}
+
+#wrapper {
 	.sidebar {
-		background: black;
 		position: fixed;
-		top: 0;
-		left: 0;
-		width: 400px;
-		height: 100%;
-		padding: 80px 20px;
+		width: 20%;
 		transition: all 0.5s ease;
+		top: 40px;
 
 		.profile {
 			margin-bottom: 30px;
@@ -43,7 +43,7 @@ body {
 
 			img {
 				display: block;
-				width: 200px;
+				width: 80%;
 				border-radius: 50%;
 				margin: 0 auto;
 			}
@@ -51,11 +51,13 @@ body {
 			h3 {
 				color: $color_1;
 				margin: 10px 0 5px;
+				font-size: 16px;
 			}
 
 			p {
 				color: $color_2;
-				font-size: 14px;
+				font-size: 10px;
+
 			}
 		}
 
@@ -63,8 +65,6 @@ body {
 			li {
 				a {
 					display: block;
-					padding: 13px 30px;
-					border-bottom: 1px solid #10558d;
 					color: $color_3;
 					font-size: 16px;
 					position: relative;
@@ -94,7 +94,7 @@ body {
 		}
 
 		.socials {
-			margin: 70px auto;
+			margin: 15% auto;
 			display: flex;
 			justify-content: space-around;
 			width: 100px;
@@ -118,7 +118,7 @@ body {
 
 main {
 	width: 75%;
-	margin: 100px 450px;
+	margin: 5% 20%;
 	border: 3px solid #21EF80;
 	padding: 75px;
 	border-radius: 25px;
@@ -189,6 +189,13 @@ main {
 			margin-top: 80px;
 			line-height: 3;
 			text-align: justify;
+
+			span {
+				border-bottom: 2px solid $color_6;
+				padding-bottom: 5px
+			}
+
+			;
 		}
 	}
 
@@ -233,28 +240,20 @@ main {
 			border-radius: 25px;
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-around;
+			justify-content: space-evenly;
 
 			h1 {
 				color: $color_6;
 			}
 
 			.project_card {
-				width: 45%;
+				width: 600px;
 				padding: 30px 0;
 
 				img {
 					width: 100%;
 					border-radius: 15px;
 				}
-
-				.pokemon img {
-					width: 20%;
-				}
-			}
-
-			.mobile_screenshot {
-				width: 225px;
 			}
 
 			.detail_container {
@@ -297,11 +296,10 @@ main {
 
 			.logos_container {
 				border: 2px solid #4E53E2;
-				width: 40%;
-				padding: 50px;
+				width: 50%;
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: center;
+				justify-content: space-evenly;
 				border-radius: 20px;
 				align-items: center;
 
@@ -333,12 +331,225 @@ main {
 				align-items: center;
 
 				p {
-					width: 50%;
+					width: 40%;
+
 				}
 
 				img {
 					width: 500px;
 					border-radius: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+// laptop breakpoint
+@media screen and (max-width: 1400px) {
+	#wrapper {
+		.sidebar {
+			ul {
+				li {
+					a {
+						display: block;
+						color: rgb(241, 237, 237);
+						font-size: 11px;
+						position: relative;
+						padding: 25px;
+					}
+				}
+			}
+
+			.socials {
+				margin: 40px auto;
+			}
+		}
+	}
+
+	main {
+
+
+		#skills {
+
+			.details {
+				display: block;
+
+				.text_details {
+					width: 100%;
+				}
+
+				.logos_container {
+					width: 100%;
+					padding: 0;
+					margin-top: 30px;
+				}
+			}
+
+
+		}
+
+		#fun_facts {
+			ul {
+				text-align: center;
+
+				.facts {
+					display: block;
+
+					p {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		#projects {
+			.projects_container {
+				.project_card {
+					width: 95%;
+
+				}
+			}
+		}
+	}
+}
+
+
+// TABLET BREAKPOINT
+@media screen and (max-width:964px) {
+	main {
+		#home {
+			.typewriter {
+				width: 95%;
+
+				h1 {
+					white-space: normal;
+				}
+			}
+		}
+
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	#wrapper {
+		.sidebar {
+			width: 28.5%;
+
+			ul {
+				li {
+					a {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+
+	main {
+		margin: 5% 30%;
+
+		#home {
+			.typewriter {
+				width: 80%;
+
+				h1 {
+					white-space: normal;
+				}
+			}
+		}
+
+		#fun_facts {
+			ul {
+				.facts {
+					img {
+						width: 100%;
+						border-radius: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:640px) {
+	body {
+		font-size: 10px;
+	}
+
+	#mobile_menu_container {
+		padding: 20px 30px;
+		display: flex;
+		position: fixed;
+		justify-content: space-between;
+		color: white;
+		width: 100%;
+		align-items: center;
+		backdrop-filter: blur(100px);
+
+		img {
+			width: 20%;
+			border-radius: 50%;
+		}
+	}
+
+	#mobile_menu {
+		font-size: 30px;
+		position: relative;
+	}
+
+
+
+	#wrapper {
+		display: none;
+
+		.sidebar {
+			width: 100%;
+			backdrop-filter: blur(100px);
+			top: 91px;
+
+			.profile {
+				margin: 0;
+
+				img {
+					display: none;
+				}
+
+
+
+				h3,
+				p {
+					display: none;
+				}
+			}
+		}
+	}
+
+	main {
+		width: 95%;
+		padding: 20px;
+		margin: 0 auto;
+		border: none;
+
+		#home {
+			margin-top: 150px;
+
+			.typewriter {
+				width: 60%;
+
+				h1 {
+					white-space: normal;
+				}
+			}
+		}
+
+		#skills {
+			.details {
+				.logos_container {
+					img {
+						width: 50px;
+					}
 				}
 			}
 		}
