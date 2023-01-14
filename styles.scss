@@ -2,8 +2,8 @@ $color_1: #ffffff;
 $color_2: rgb(206, 240, 253);
 $color_3: rgb(241, 237, 237);
 $color_4: #dee4ec;
-$color_5: #0c7db1;
-$color_6: #FF63D8;
+$blue: #0c7db1;
+$pink: #FF63D8;
 $font-family_1: 'Press Start 2P';
 
 @import "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
@@ -12,6 +12,7 @@ html {
 	scroll-behavior: smooth;
 }
 
+/* Global Styles */
 * {
 	margin: 0;
 	padding: 0;
@@ -26,95 +27,99 @@ body {
 	color: white;
 }
 
+/* Hamburger Menu for Mobile Size (Initially not displayed on Desktops,Tablets Size)*/
 #mobile_menu_container {
 	display: none;
 }
 
-#wrapper {
-	.sidebar {
-		position: fixed;
-		width: 20%;
-		transition: all 0.5s ease;
-		top: 40px;
+/* Sidebar */
+.sidebar {
+	position: fixed;
+	width: 20%;
+	transition: all 0.5s ease;
+	top: 40px;
 
-		.profile {
-			margin-bottom: 30px;
-			text-align: center;
+	/* Profile Section in Sidebar Contains Images and Texts*/
+	.profile {
+		margin-bottom: 30px;
+		text-align: center;
 
-			img {
-				display: block;
-				width: 80%;
-				border-radius: 50%;
-				margin: 0 auto;
-			}
-
-			h3 {
-				color: $color_1;
-				margin: 10px 0 5px;
-				font-size: 16px;
-			}
-
-			p {
-				color: $color_2;
-				font-size: 10px;
-
-			}
+		img {
+			display: block;
+			width: 80%;
+			border-radius: 50%;
+			margin: 0 auto;
 		}
 
-		ul {
-			li {
-				a {
-					display: block;
-					color: $color_3;
-					font-size: 16px;
-					position: relative;
-					padding: 25px;
+		h3 {
+			color: $color_1;
+			margin: 10px 0 5px;
+			font-size: 16px;
+		}
+
+		p {
+			color: $color_2;
+			font-size: 10px;
+
+		}
+	}
+
+	/* Sidebar Links */
+	ul {
+		li {
+			a {
+				display: block;
+				color: $color_3;
+				font-size: 16px;
+				position: relative;
+				padding: 25px;
+
+				.icon {
+					color: $color_4;
+					width: 30px;
+					display: inline-block;
+				}
+
+				&:hover {
+					color: $blue;
+					background: white;
+					border-right: 2px solid rgb(5, 68, 104);
 
 					.icon {
-						color: $color_4;
-						width: 30px;
-						display: inline-block;
+						color: $blue;
 					}
 
-					&:hover {
-						color: $color_5;
-						background: white;
-						border-right: 2px solid rgb(5, 68, 104);
-
-						.icon {
-							color: $color_5;
-						}
-
-						&:before {
-							display: block;
-						}
+					&:before {
+						display: block;
 					}
 				}
-			}
-		}
-
-		.socials {
-			margin: 15% auto;
-			display: flex;
-			justify-content: space-around;
-			width: 100px;
-
-			a:hover {
-				background-color: white;
-				padding: 5px;
-				border-radius: 50%;
-
-				span {
-					color: black;
-				}
-			}
-
-			.icon {
-				color: $color_4;
 			}
 		}
 	}
+
+	/*Social Links*/
+	.socials {
+		margin: 15% auto;
+		display: flex;
+		justify-content: space-around;
+		width: 100px;
+
+		a:hover {
+			background-color: white;
+			padding: 5px;
+			border-radius: 50%;
+
+			span {
+				color: black;
+			}
+		}
+
+		.icon {
+			color: $color_4;
+		}
+	}
 }
+
 
 main {
 	width: 75%;
@@ -122,357 +127,348 @@ main {
 	border: 3px solid #21EF80;
 	padding: 75px;
 	border-radius: 25px;
+}
 
-	.uppermost_text {
-		display: flex;
-		justify-content: space-between;
+.uppermost_text {
+	display: flex;
+	justify-content: space-between;
 
-		h4:first-child {
-			color: #4E53E2;
+	h4:first-child {
+		color: #4E53E2;
+	}
+
+	span {
+		color: #21EF80;
+	}
+}
+
+#home {
+	h1 {
+		margin-top: 50px;
+	}
+
+	/* The typing effect */
+	@keyframes typing {
+		from {
+			width: 0;
 		}
 
-		span {
-			color: #21EF80;
+		to {
+			width: 100%;
 		}
 	}
 
-	#home {
+	/* The typewriter cursor effect */
+	@keyframes blink-caret {
 
-		/* The typing effect */
-		@keyframes typing {
-			from {
-				width: 0;
-			}
-
-			to {
-				width: 100%;
-			}
+		from,
+		to {
+			border-color: transparent;
 		}
 
-		/* The typewriter cursor effect */
-		@keyframes blink-caret {
-
-			from,
-			to {
-				border-color: transparent;
-			}
-
-			50% {
-				border-color: $color_6;
-				;
-			}
-		}
-
-		h1 {
-			margin-top: 50px;
-		}
-
-		.typewriter {
-			margin-top: 70px;
-			width: 640px;
-
-			h1 {
-				overflow: hidden;
-				border-right: .15em solid black;
-				white-space: nowrap;
-				letter-spacing: .15em;
-				animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-
-				span {
-					color: $color_6;
-					;
-				}
-			}
-		}
-
-		p {
-			margin-top: 80px;
-			line-height: 3;
-			text-align: justify;
-
-			span {
-				border-bottom: 2px solid $color_6;
-				padding-bottom: 5px
-			}
-
+		50% {
+			border-color: $pink;
 			;
 		}
 	}
 
-	hr {
-		margin: 50px 0;
-	}
-
-	#experience {
-		p {
-			line-height: 3;
-			margin-top: 50px;
-		}
+	.typewriter {
+		margin-top: 70px;
+		width: 640px;
 
 		h1 {
-			color: $color_6;
-		}
+			overflow: hidden;
+			border-right: .15em solid black;
+			white-space: nowrap;
+			letter-spacing: .15em;
+			animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 
-		;
+			span {
+				color: $pink;
+				;
+			}
+		}
 	}
 
-	#education {
-		.education_list {
-			li {
-				list-style: disc;
-				margin: 50px 0;
-				line-height: 3;
+	p {
+		margin-top: 80px;
+		line-height: 3;
+		text-align: justify;
+
+		span {
+			border-bottom: 2px solid $pink;
+			padding-bottom: 5px
+		}
+	}
+}
+
+hr {
+	margin: 50px 0;
+}
+
+#experience {
+	p {
+		line-height: 3;
+		margin-top: 50px;
+	}
+
+	h1 {
+		color: $pink;
+	}
+
+	;
+}
+
+#education {
+	h1 {
+		color: $pink;
+	}
+
+	.education_list {
+		li {
+			list-style: disc;
+			margin: 50px 0;
+			line-height: 3;
+		}
+	}
+
+
+}
+
+#projects {
+	h1 {
+		color: $pink;
+	}
+
+	.projects_container {
+		margin-top: 50px;
+		border-radius: 25px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+
+		h1 {
+			color: $pink;
+		}
+
+		.project_card {
+			width: 600px;
+			padding: 30px 0;
+
+			img {
+				width: 100%;
+				border-radius: 15px;
 			}
 		}
 
-		h1 {
-			color: $color_6;
+		.detail_container {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 10px;
+			align-items: baseline;
+
+			a {
+				color: white;
+			}
+		}
+
+		.link_icons:hover {
+			transition: 0.2s;
+			transform: translateY(-5px);
+			cursor: pointer;
 		}
 	}
+}
 
-	#projects {
-		h1 {
-			color: $color_6;
+#skills {
+	h1 {
+		color: $pink;
+	}
+
+	.skills_details {
+		display: flex;
+		justify-content: space-around;
+		padding-top: 50px;
+
+		.skills_text_details {
+			width: 40%;
+			letter-spacing: 2px;
+			line-height: 2;
+			margin-top: 35px;
+			text-align: justify;
+			text-indent: 50px;
 		}
 
-		.projects_container {
-			margin-top: 50px;
-			border-radius: 25px;
+		.logos_container {
+			border: 2px solid #4E53E2;
+			width: 50%;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-evenly;
+			border-radius: 20px;
+			align-items: center;
 
-			h1 {
-				color: $color_6;
-			}
-
-			.project_card {
-				width: 600px;
-				padding: 30px 0;
-
-				img {
-					width: 100%;
-					border-radius: 15px;
-				}
-			}
-
-			.detail_container {
-				display: flex;
-				justify-content: space-between;
-				padding-top: 10px;
-				align-items: baseline;
-
-				a {
-					color: white;
-				}
-			}
-
-			.link_icons:hover {
-				transition: 0.2s;
-				transform: translateY(-5px);
-				cursor: pointer;
+			img {
+				width: 90px;
+				margin: 20px
 			}
 		}
 	}
+}
 
-	#skills {
-		h1 {
-			color: $color_6;
+#fun_facts {
+	h1 {
+		color: $pink;
+	}
+
+	ul {
+		line-height: 2;
+		margin-top: 50px;
+		text-align: justify;
+
+		li {
+			margin: 30px 0;
 		}
 
-		.details {
+		.facts {
 			display: flex;
 			justify-content: space-around;
-			padding-top: 50px;
+			align-items: center;
 
-			.text_details {
+			p {
 				width: 40%;
-				letter-spacing: 2px;
-				line-height: 2;
-				margin-top: 35px;
-				text-align: justify;
-				text-indent: 50px;
+
+			}
+
+			img {
+				width: 500px;
+				border-radius: 20px;
+			}
+		}
+	}
+}
+
+
+
+// laptop breakpoint
+@media screen and (max-width: 1400px) {
+
+	.sidebar {
+		ul {
+			li {
+				a {
+					display: block;
+					color: rgb(241, 237, 237);
+					font-size: 11px;
+					position: relative;
+					padding: 25px;
+				}
+			}
+		}
+
+		.socials {
+			margin: 40px auto;
+		}
+	}
+
+
+	#skills {
+		.skills_details {
+			display: block;
+
+			.skills_text_details {
+				width: 100%;
 			}
 
 			.logos_container {
-				border: 2px solid #4E53E2;
-				width: 50%;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-evenly;
-				border-radius: 20px;
-				align-items: center;
-
-				img {
-					width: 90px;
-					margin: 20px
-				}
+				width: 100%;
+				padding: 0;
+				margin-top: 30px;
 			}
 		}
 	}
 
 	#fun_facts {
-		h1 {
-			color: $color_6;
-		}
-
 		ul {
-			line-height: 2;
-			margin-top: 50px;
-			text-align: justify;
-
-			li {
-				margin: 30px 0;
-			}
+			text-align: center;
 
 			.facts {
-				display: flex;
-				justify-content: space-around;
-				align-items: center;
-
-				p {
-					width: 40%;
-
-				}
-
-				img {
-					width: 500px;
-					border-radius: 20px;
-				}
-			}
-		}
-	}
-}
-
-
-// laptop breakpoint
-@media screen and (max-width: 1400px) {
-	#wrapper {
-		.sidebar {
-			ul {
-				li {
-					a {
-						display: block;
-						color: rgb(241, 237, 237);
-						font-size: 11px;
-						position: relative;
-						padding: 25px;
-					}
-				}
-			}
-
-			.socials {
-				margin: 40px auto;
-			}
-		}
-	}
-
-	main {
-
-
-		#skills {
-
-			.details {
 				display: block;
 
-				.text_details {
+				p {
 					width: 100%;
-				}
-
-				.logos_container {
-					width: 100%;
-					padding: 0;
-					margin-top: 30px;
-				}
-			}
-
-
-		}
-
-		#fun_facts {
-			ul {
-				text-align: center;
-
-				.facts {
-					display: block;
-
-					p {
-						width: 100%;
-					}
 				}
 			}
 		}
+	}
 
-		#projects {
-			.projects_container {
-				.project_card {
-					width: 95%;
+	#projects {
+		.projects_container {
+			.project_card {
+				width: 95%;
 
-				}
 			}
 		}
 	}
 }
 
 
-// TABLET BREAKPOINT
+/* Tablet breakpoint*/
 @media screen and (max-width:964px) {
-	main {
-		#home {
-			.typewriter {
-				width: 95%;
+	#home {
+		.typewriter {
+			width: 95%;
 
-				h1 {
-					white-space: normal;
-				}
+			h1 {
+				white-space: normal;
 			}
 		}
-
 	}
 }
 
 @media screen and (max-width: 768px) {
 
-	#wrapper {
-		.sidebar {
-			width: 28.5%;
+	.sidebar {
+		width: 28.5%;
 
-			ul {
-				li {
-					a {
-						font-size: 13px;
-					}
+		ul {
+			li {
+				a {
+					font-size: 13px;
 				}
 			}
 		}
 	}
+
 
 	main {
 		margin: 5% 30%;
+	}
 
-		#home {
-			.typewriter {
-				width: 80%;
+	#home {
+		.typewriter {
+			width: 80%;
 
-				h1 {
-					white-space: normal;
-				}
+			h1 {
+				white-space: normal;
 			}
 		}
+	}
 
-		#fun_facts {
-			ul {
-				.facts {
-					img {
-						width: 100%;
-						border-radius: 20px;
-					}
+	#fun_facts {
+		ul {
+			.facts {
+				img {
+					width: 100%;
+					border-radius: 20px;
 				}
 			}
 		}
 	}
+
 }
 
+/*Mobile Breakpoint*/
 @media screen and (max-width:640px) {
 	body {
 		font-size: 10px;
@@ -499,59 +495,59 @@ main {
 		position: relative;
 	}
 
-
-
 	#wrapper {
 		display: none;
+	}
 
-		.sidebar {
-			width: 100%;
-			backdrop-filter: blur(100px);
-			top: 91px;
+	.sidebar {
+		width: 100%;
+		backdrop-filter: blur(100px);
+		top: 91px;
 
-			.profile {
-				margin: 0;
+		.profile {
+			margin: 0;
 
-				img {
-					display: none;
-				}
+			img {
+				display: none;
+			}
 
 
 
-				h3,
-				p {
-					display: none;
-				}
+			h3,
+			p {
+				display: none;
 			}
 		}
 	}
+
 
 	main {
 		width: 95%;
 		padding: 20px;
 		margin: 0 auto;
 		border: none;
+	}
 
-		#home {
-			margin-top: 150px;
+	#home {
+		margin-top: 150px;
 
-			.typewriter {
-				width: 60%;
+		.typewriter {
+			width: 60%;
 
-				h1 {
-					white-space: normal;
-				}
+			h1 {
+				white-space: normal;
 			}
 		}
+	}
 
-		#skills {
-			.details {
-				.logos_container {
-					img {
-						width: 50px;
-					}
+	#skills {
+		.skills_details {
+			.logos_container {
+				img {
+					width: 50px;
 				}
 			}
 		}
 	}
+
 }

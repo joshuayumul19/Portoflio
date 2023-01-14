@@ -3,6 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -17,73 +18,78 @@ body {
   color: white;
 }
 
+/* Hamburger Menu for Mobile Size (Initially not displayed on Desktops,Tablets Size)*/
 #mobile_menu_container {
   display: none;
 }
 
-#wrapper .sidebar {
+/* Sidebar */
+.sidebar {
   position: fixed;
   width: 20%;
   transition: all 0.5s ease;
   top: 40px;
+  /* Profile Section in Sidebar Contains Images and Texts*/
+  /* Sidebar Links */
+  /*Social Links*/
 }
-#wrapper .sidebar .profile {
+.sidebar .profile {
   margin-bottom: 30px;
   text-align: center;
 }
-#wrapper .sidebar .profile img {
+.sidebar .profile img {
   display: block;
   width: 80%;
   border-radius: 50%;
   margin: 0 auto;
 }
-#wrapper .sidebar .profile h3 {
+.sidebar .profile h3 {
   color: #ffffff;
   margin: 10px 0 5px;
   font-size: 16px;
 }
-#wrapper .sidebar .profile p {
+.sidebar .profile p {
   color: rgb(206, 240, 253);
   font-size: 10px;
 }
-#wrapper .sidebar ul li a {
+.sidebar ul li a {
   display: block;
   color: rgb(241, 237, 237);
   font-size: 16px;
   position: relative;
   padding: 25px;
 }
-#wrapper .sidebar ul li a .icon {
+.sidebar ul li a .icon {
   color: #dee4ec;
   width: 30px;
   display: inline-block;
 }
-#wrapper .sidebar ul li a:hover {
+.sidebar ul li a:hover {
   color: #0c7db1;
   background: white;
   border-right: 2px solid rgb(5, 68, 104);
 }
-#wrapper .sidebar ul li a:hover .icon {
+.sidebar ul li a:hover .icon {
   color: #0c7db1;
 }
-#wrapper .sidebar ul li a:hover:before {
+.sidebar ul li a:hover:before {
   display: block;
 }
-#wrapper .sidebar .socials {
+.sidebar .socials {
   margin: 15% auto;
   display: flex;
   justify-content: space-around;
   width: 100px;
 }
-#wrapper .sidebar .socials a:hover {
+.sidebar .socials a:hover {
   background-color: white;
   padding: 5px;
   border-radius: 50%;
 }
-#wrapper .sidebar .socials a:hover span {
+.sidebar .socials a:hover span {
   color: black;
 }
-#wrapper .sidebar .socials .icon {
+.sidebar .socials .icon {
   color: #dee4ec;
 }
 
@@ -94,19 +100,24 @@ main {
   padding: 75px;
   border-radius: 25px;
 }
-main .uppermost_text {
+
+.uppermost_text {
   display: flex;
   justify-content: space-between;
 }
-main .uppermost_text h4:first-child {
+.uppermost_text h4:first-child {
   color: #4E53E2;
 }
-main .uppermost_text span {
+.uppermost_text span {
   color: #21EF80;
 }
-main #home {
+
+#home {
   /* The typing effect */
   /* The typewriter cursor effect */
+}
+#home h1 {
+  margin-top: 50px;
 }
 @-webkit-keyframes typing {
   from {
@@ -140,14 +151,11 @@ main #home {
     border-color: #FF63D8;
   }
 }
-main #home h1 {
-  margin-top: 50px;
-}
-main #home .typewriter {
+#home .typewriter {
   margin-top: 70px;
   width: 640px;
 }
-main #home .typewriter h1 {
+#home .typewriter h1 {
   overflow: hidden;
   border-right: 0.15em solid black;
   white-space: nowrap;
@@ -155,80 +163,85 @@ main #home .typewriter h1 {
   -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
           animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
-main #home .typewriter h1 span {
+#home .typewriter h1 span {
   color: #FF63D8;
 }
-main #home p {
+#home p {
   margin-top: 80px;
   line-height: 3;
   text-align: justify;
 }
-main #home p span {
+#home p span {
   border-bottom: 2px solid #FF63D8;
   padding-bottom: 5px;
 }
-main hr {
+
+hr {
   margin: 50px 0;
 }
-main #experience p {
+
+#experience p {
   line-height: 3;
   margin-top: 50px;
 }
-main #experience h1 {
+#experience h1 {
   color: #FF63D8;
 }
-main #education .education_list li {
+
+#education h1 {
+  color: #FF63D8;
+}
+#education .education_list li {
   list-style: disc;
   margin: 50px 0;
   line-height: 3;
 }
-main #education h1 {
+
+#projects h1 {
   color: #FF63D8;
 }
-main #projects h1 {
-  color: #FF63D8;
-}
-main #projects .projects_container {
+#projects .projects_container {
   margin-top: 50px;
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-main #projects .projects_container h1 {
+#projects .projects_container h1 {
   color: #FF63D8;
 }
-main #projects .projects_container .project_card {
+#projects .projects_container .project_card {
   width: 600px;
   padding: 30px 0;
 }
-main #projects .projects_container .project_card img {
+#projects .projects_container .project_card img {
   width: 100%;
   border-radius: 15px;
 }
-main #projects .projects_container .detail_container {
+#projects .projects_container .detail_container {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
   align-items: baseline;
 }
-main #projects .projects_container .detail_container a {
+#projects .projects_container .detail_container a {
   color: white;
 }
-main #projects .projects_container .link_icons:hover {
+#projects .projects_container .link_icons:hover {
   transition: 0.2s;
   transform: translateY(-5px);
   cursor: pointer;
 }
-main #skills h1 {
+
+#skills h1 {
   color: #FF63D8;
 }
-main #skills .details {
+#skills .skills_details {
   display: flex;
   justify-content: space-around;
   padding-top: 50px;
 }
-main #skills .details .text_details {
+#skills .skills_details .skills_text_details {
   width: 40%;
   letter-spacing: 2px;
   line-height: 2;
@@ -236,7 +249,7 @@ main #skills .details .text_details {
   text-align: justify;
   text-indent: 50px;
 }
-main #skills .details .logos_container {
+#skills .skills_details .logos_container {
   border: 2px solid #4E53E2;
   width: 50%;
   display: flex;
@@ -245,98 +258,101 @@ main #skills .details .logos_container {
   border-radius: 20px;
   align-items: center;
 }
-main #skills .details .logos_container img {
+#skills .skills_details .logos_container img {
   width: 90px;
   margin: 20px;
 }
-main #fun_facts h1 {
+
+#fun_facts h1 {
   color: #FF63D8;
 }
-main #fun_facts ul {
+#fun_facts ul {
   line-height: 2;
   margin-top: 50px;
   text-align: justify;
 }
-main #fun_facts ul li {
+#fun_facts ul li {
   margin: 30px 0;
 }
-main #fun_facts ul .facts {
+#fun_facts ul .facts {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-main #fun_facts ul .facts p {
+#fun_facts ul .facts p {
   width: 40%;
 }
-main #fun_facts ul .facts img {
+#fun_facts ul .facts img {
   width: 500px;
   border-radius: 20px;
 }
 
 @media screen and (max-width: 1400px) {
-  #wrapper .sidebar ul li a {
+  .sidebar ul li a {
     display: block;
     color: rgb(241, 237, 237);
     font-size: 11px;
     position: relative;
     padding: 25px;
   }
-  #wrapper .sidebar .socials {
+  .sidebar .socials {
     margin: 40px auto;
   }
-  main #skills .details {
+  #skills .skills_details {
     display: block;
   }
-  main #skills .details .text_details {
+  #skills .skills_details .skills_text_details {
     width: 100%;
   }
-  main #skills .details .logos_container {
+  #skills .skills_details .logos_container {
     width: 100%;
     padding: 0;
     margin-top: 30px;
   }
-  main #fun_facts ul {
+  #fun_facts ul {
     text-align: center;
   }
-  main #fun_facts ul .facts {
+  #fun_facts ul .facts {
     display: block;
   }
-  main #fun_facts ul .facts p {
+  #fun_facts ul .facts p {
     width: 100%;
   }
-  main #projects .projects_container .project_card {
+  #projects .projects_container .project_card {
     width: 95%;
   }
 }
+/* Tablet breakpoint*/
 @media screen and (max-width: 964px) {
-  main #home .typewriter {
+  #home .typewriter {
     width: 95%;
   }
-  main #home .typewriter h1 {
+  #home .typewriter h1 {
     white-space: normal;
   }
 }
 @media screen and (max-width: 768px) {
-  #wrapper .sidebar {
+  .sidebar {
     width: 28.5%;
   }
-  #wrapper .sidebar ul li a {
+  .sidebar ul li a {
     font-size: 13px;
   }
   main {
     margin: 5% 30%;
   }
-  main #home .typewriter {
+  #home .typewriter {
     width: 80%;
   }
-  main #home .typewriter h1 {
+  #home .typewriter h1 {
     white-space: normal;
   }
-  main #fun_facts ul .facts img {
+  #fun_facts ul .facts img {
     width: 100%;
     border-radius: 20px;
   }
 }
+/*Mobile Breakpoint*/
 @media screen and (max-width: 640px) {
   body {
     font-size: 10px;
@@ -363,20 +379,20 @@ main #fun_facts ul .facts img {
   #wrapper {
     display: none;
   }
-  #wrapper .sidebar {
+  .sidebar {
     width: 100%;
     -webkit-backdrop-filter: blur(100px);
             backdrop-filter: blur(100px);
     top: 91px;
   }
-  #wrapper .sidebar .profile {
+  .sidebar .profile {
     margin: 0;
   }
-  #wrapper .sidebar .profile img {
+  .sidebar .profile img {
     display: none;
   }
-  #wrapper .sidebar .profile h3,
-#wrapper .sidebar .profile p {
+  .sidebar .profile h3,
+.sidebar .profile p {
     display: none;
   }
   main {
@@ -385,16 +401,16 @@ main #fun_facts ul .facts img {
     margin: 0 auto;
     border: none;
   }
-  main #home {
+  #home {
     margin-top: 150px;
   }
-  main #home .typewriter {
+  #home .typewriter {
     width: 60%;
   }
-  main #home .typewriter h1 {
+  #home .typewriter h1 {
     white-space: normal;
   }
-  main #skills .details .logos_container img {
+  #skills .skills_details .logos_container img {
     width: 50px;
   }
 }/*# sourceMappingURL=styles.css.map */
