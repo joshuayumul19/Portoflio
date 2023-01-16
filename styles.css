@@ -111,6 +111,10 @@ main {
   color: #21EF80;
 }
 
+#home {
+  /* The typing effect */
+  /* The typewriter cursor effect */
+}
 #home h1 {
   margin-top: 50px;
 }
@@ -245,7 +249,6 @@ hr {
   text-indent: 50px;
 }
 #skills .skills_details .logos_container {
-  border: 2px solid #4E53E2;
   width: 50%;
   display: flex;
   flex-wrap: wrap;
@@ -329,6 +332,8 @@ hr {
 @media screen and (max-width: 768px) {
   .sidebar {
     width: 28.5%;
+    overflow: auto;
+    height: 100vh;
   }
   .sidebar ul li a {
     font-size: 13px;
@@ -379,6 +384,7 @@ hr {
     -webkit-backdrop-filter: blur(100px);
             backdrop-filter: blur(100px);
     top: 91px;
+    height: auto;
   }
   .sidebar .profile {
     margin: 0;
@@ -394,7 +400,6 @@ hr {
     width: 95%;
     padding: 20px;
     margin: 0 auto;
-    border: none;
   }
   #home {
     margin-top: 150px;

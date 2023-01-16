@@ -429,6 +429,8 @@ hr {
 
 	.sidebar {
 		width: 28.5%;
+		overflow: auto;
+		height: 100vh;
 
 		ul {
 			li {
@@ -502,6 +504,7 @@ hr {
 		width: 100%;
 		backdrop-filter: blur(100px);
 		top: 91px;
+		height: auto;
 
 		.profile {
 			margin: 0;
